@@ -1,50 +1,103 @@
-# Welcome to your Expo app 👋
+# 🔔 Push Notifications Test App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Приложение для тестирования push уведомлений с использованием Expo Notifications.
 
-## Get started
+## ✨ Возможности
 
-1. Install dependencies
+- 📱 Красивый современный интерфейс с поддержкой темной темы
+- 🔐 Запрос разрешений на уведомления
+- 🎫 Получение и отображение Expo Push токена
+- 📋 Подписка/отписка от топиков
+- 📊 История всех полученных уведомлений
+- 🧪 Тестовые уведомления
+- ⚙️ Быстрый доступ к настройкам
 
+## 🚀 Быстрый старт
+
+1. **Установите зависимости:**
    ```bash
-   npm install
+   yarn install
    ```
 
-2. Start the app
+2. **Настройте Expo Notifications:**
+   - Приложение готово к работе в Expo Go
+   - Не требует дополнительной настройки Firebase
 
+3. **Запустите приложение:**
    ```bash
-   npx expo start
+   yarn start
    ```
 
-In the output, you'll find options to open the app in a
+## 📱 Экраны
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Главный экран (Тест)
+- Статус системы уведомлений
+- Кнопки для управления разрешениями
+- Получение Expo Push токена
+- Подписка на топики
+- Тестовые уведомления
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### Экран истории (История)
+- Список всех полученных уведомлений
+- Детальная информация о каждом уведомлении
+- Возможность очистки истории
+- Pull-to-refresh для обновления
 
-## Get a fresh project
+## 🛠 Технологии
 
-When you're ready, run:
+- **React Native** - кроссплатформенная разработка
+- **Expo** - инструменты разработки
+- **TypeScript** - типизация
+- **Expo Notifications** - система уведомлений Expo
+- **Expo Router** - навигация
+- **Ionicons** - иконки
+
+## 📋 Функции
+
+### Сервис уведомлений (`services/notificationService.ts`)
+- Запрос разрешений
+- Получение Expo Push токена
+- Подписка на топики
+- Обработка входящих сообщений
+- История уведомлений
+
+### Тестирование
+Используйте скрипт `test-expo-notification.js` для отправки тестовых уведомлений:
 
 ```bash
-npm run reset-project
+node test-expo-notification.js "ExponentPushToken[xxxxxxxxxxxxxxxxxxxxxx]" "Заголовок" "Текст сообщения"
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🔧 Настройка
 
-## Learn more
+1. **Expo Notifications:**
+   - Работает из коробки в Expo Go
+   - Не требует дополнительной настройки
+   - Поддерживает iOS и Android
 
-To learn more about developing your project with Expo, look at the following resources:
+2. **Физическое устройство:**
+   - Push уведомления работают только на физических устройствах
+   - Симуляторы не поддерживают push уведомления
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## 📚 Полезные ссылки
 
-## Join the community
+- [Expo Notifications](https://docs.expo.dev/versions/latest/sdk/notifications/)
+- [Expo Push API](https://docs.expo.dev/push-notifications/sending-notifications/)
+- [Expo Documentation](https://docs.expo.dev/)
+- [Expo Push Tool](https://expo.dev/notifications)
 
-Join our community of developers creating universal apps.
+## 🐛 Решение проблем
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### Уведомления не приходят
+1. Проверьте разрешения в настройках устройства
+2. Убедитесь, что Expo Push токен получен
+3. Используйте физическое устройство (не симулятор)
+
+### Ошибки сборки
+1. Убедитесь, что используете физическое устройство
+2. Проверьте настройки в `app.json`
+3. Очистите кэш: `yarn start --clear`
+
+## 📄 Лицензия
+
+MIT License - используйте свободно для своих проектов!
